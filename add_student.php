@@ -9,12 +9,12 @@ include('inc/common.php');
             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
                 <div class="mb-3">
                     <label for="" class="form-label">Name</label>
-                    <input type="text" class="form-control" name="name">                    
+                    <input type="text" class="form-control" name="name" required>                    
                 </div>
                 <div class="mb-3">
                     <label for="" class="form-label">Class</label>
-                    <select name="class" id="" class="form-control">
-                        <option disabled>Select Class</option>
+                    <select name="class" id="" class="form-control" required>
+                        <option disabled selected>Select Class</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -29,8 +29,8 @@ include('inc/common.php');
                 </div>
                 <div class="mb-3">
                     <label for="" class="form-label">Section</label>
-                    <select name="section" id="" class="form-control">
-                        <option disabled>Select Section</option>
+                    <select name="section" id="" class="form-control" required>
+                        <option disabled selected>Select Section</option>
                         <option value="A">A</option>
                         <option value="B">B</option>
                         <option value="C">C</option>
@@ -38,19 +38,19 @@ include('inc/common.php');
                 </div>
                 <div class="mb-3">
                     <label for="" class="form-label">Roll</label>
-                    <input type="number" class="form-control" name="roll">                    
+                    <input type="number" class="form-control" name="roll" required>                    
                 </div>
                 <div class="mb-3">
                     <label for="" class="form-label">Phone</label>
-                    <input type="tel" class="form-control" name="phone">                    
+                    <input type="tel" class="form-control" name="phone" required>                    
                 </div>
                 <div class="mb-3">
                     <label for="" class="form-label">Email</label>
-                    <input type="email" class="form-control" name="email">                    
+                    <input type="email" class="form-control" name="email" required>                    
                 </div>
                 <div class="mb-3">
                     <label for="" class="form-label">Address</label>
-                    <textarea name="address" class="form-control"></textarea>                    
+                    <textarea name="address" class="form-control" required></textarea>                    
                 </div>
                 <div>
                     <input type="submit" value="Add Student" name="submit" class="form-control btn btn-primary">
