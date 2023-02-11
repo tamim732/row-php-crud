@@ -35,7 +35,7 @@ include('inc/common.php');
                             <td>
                             <div class="d-grid gap-2 d-md-block">
                                 <button class="btn btn-primary" type="button"><a href="view.php?id=<?php echo $row['id']; ?>" class="text-white text-decoration-none">View</a></button>
-                                <button class="btn btn-success" type="button"><a href="" class="text-white text-decoration-none">Edit</a></button>
+                                <button class="btn btn-success" type="button"><a href="update.php?id=<?php echo $row['id']; ?>" class="text-white text-decoration-none">Edit</a></button>
                                 <button class="btn btn-danger" type="button"><a href="" class="text-white text-decoration-none">Delete</a></button>
                             </div>
                         </td>
