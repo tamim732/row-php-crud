@@ -9,6 +9,10 @@ include('inc/common.php');
                     echo $_SESSION['success'];
                     unset($_SESSION['success']);
                 }
+                if(isset($_SESSION['delete'])){
+                    echo $_SESSION['delete'];
+                    unset($_SESSION['delete']);
+                }
                 ?>
                 <table class="table table-border">
                     <tr>
@@ -36,7 +40,7 @@ include('inc/common.php');
                             <div class="d-grid gap-2 d-md-block">
                                 <button class="btn btn-primary" type="button"><a href="view.php?id=<?php echo $row['id']; ?>" class="text-white text-decoration-none">View</a></button>
                                 <button class="btn btn-success" type="button"><a href="update.php?id=<?php echo $row['id']; ?>" class="text-white text-decoration-none">Edit</a></button>
-                                <button class="btn btn-danger" type="button"><a href="" class="text-white text-decoration-none">Delete</a></button>
+                                <button class="btn btn-danger" type="button"><a href="delete.php?id=<?php echo $row['id']; ?>" onclick="return confirm('Are you sure?')" class="text-white text-decoration-none">Delete</a></button>
                             </div>
                         </td>
                     </tr>
