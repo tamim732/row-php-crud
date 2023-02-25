@@ -69,8 +69,9 @@ while( $row = mysqli_fetch_assoc($result)) {
         <tr>
             <td><?php echo $row['id']; ?></td>
             <td><img style="width: 200px; height: 200px;" src="img/<?php echo $row['image']; ?>" alt=""></td>
-            <td><a href=""></a>Edit</td>
-            <td><a href=""></a>Delete</td>
+            <td><a href="edit.php?id=<?php echo $row['id']; ?>">Edit</a></td>
+            <td><a href="delete.php?id=<?php echo $row['id']; ?>&image_delete=<?php echo $row['image']; ?>" onclick="return confirm('Are You Sure?')">Delete</a></td>
+            
             
         </tr>
     <?php
