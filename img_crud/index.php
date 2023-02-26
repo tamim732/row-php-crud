@@ -16,7 +16,7 @@ if(in_array( $lower_case,$file_type,$rename)){
     if( $size < 100000) {
         $upload = move_uploaded_file($tmp_name, 'img/' . $rename );
         if($upload) {
-            $insert =  "INSERT INTO image (`image`) VALUES ('$rename')";
+            $insert =  "INSERT INTO images (`image`) VALUES ('$rename')";
                 mysqli_query($con, $insert);
             if($insert) {
                 echo 'Image Stored successfully';
@@ -61,7 +61,7 @@ if(in_array( $lower_case,$file_type,$rename)){
 </form>
 <br><br><br><br>
 <?php
-$sql = "SELECT * FROM image";
+$sql = "SELECT * FROM images";
 $result = mysqli_query($con, $sql);
 echo '<table border="1">';
 while( $row = mysqli_fetch_assoc($result)) {
